@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ربات ترید حرفه‌ای حاکان</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Tahoma, sans-serif; padding: 20px; background: #f2f2f2; direction: rtl; }
+        .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .title { font-size: 22px; font-weight: bold; margin-bottom: 10px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; border-radius: 8px; border: none; cursor: pointer; }
+        .open { background-color: #4CAF50; color: white; }
+        .close { background-color: #f44336; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="title">ربات ترید حرفه‌ای حاکان</div>
+        <p>وضعیت پوزیشن فعلی: <span id="status">بسته</span></p>
+        <button class="open" onclick="openPosition()">باز کردن پوزیشن</button>
+        <button class="close" onclick="closePosition()">بستن پوزیشن</button>
+    </div>
+
+    <div class="card">
+        <div class="title">جزئیات سیگنال فعلی</div>
+        <p>جفت ارز: PI/USDT</p>
+        <p>قیمت ورود: 0.6350</p>
+        <p>حد سود: 0.6450</p>
+        <p>حد ضرر: 0.6280</p>
+    </div>
+
+    <script>
+        function openPosition() {
+            document.getElementById("status").innerText = "باز";
+        }
+        function closePosition() {
+            document.getElementById("status").innerText = "بسته";
+        }
+    </script>
+
+</body>
+</html>
